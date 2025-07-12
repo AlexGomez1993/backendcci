@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js",
     "start": "node server.js",
-    "clean": "rm -rf dist/",
+    "clean": "rimraf -rf dist/",
     "build": "npm run clean && mkdir dist && babel src/ -s -d dist",
     "production": "npm run build && node dist/"
   },
@@ -38,6 +38,7 @@
     "@babel/node": "^7.26.0",
     "@babel/plugin-transform-runtime": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "rimraf": "^6.0.1"
   }
 }
